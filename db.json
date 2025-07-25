@@ -1,0 +1,29 @@
+{
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Asha Bhat",
+      "specialty": "Cardiologist",
+      "availableDays": ["Monday", "Wednesday", "Friday"],
+      "email": "asha@example.com",
+      "password": "asha123"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Raj Mehta",
+      "specialty": "Dermatologist",
+      "availableDays": ["Tuesday", "Thursday"],
+      "email": "raj@example.com",
+      "password": "raj123"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "doctorId": 1,
+      "patientName": "John",
+      "date": "2025-08-01",
+      "time": "10:00"
+    }
+  ]
+}
