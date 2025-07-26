@@ -1,6 +1,6 @@
 import type { Appointment, Doctor } from "@/types";
 
-// Fetch all appointments
+// ✅ Fetch all appointments
 export const fetchAppointments = async (): Promise<Appointment[]> => {
   const res = await fetch("http://localhost:3000/appointments");
 
@@ -11,8 +11,10 @@ export const fetchAppointments = async (): Promise<Appointment[]> => {
   return res.json();
 };
 
-// Signup a new doctor
-export const signupDoctor = async (doctorData: Omit<Doctor, "id">): Promise<Doctor> => {
+// ✅ Signup a new doctor
+export const signupDoctor = async (
+  doctorData: Omit<Doctor, "id">
+): Promise<Doctor> => {
   const res = await fetch("http://localhost:3000/doctors", {
     method: "POST",
     headers: {
@@ -28,8 +30,11 @@ export const signupDoctor = async (doctorData: Omit<Doctor, "id">): Promise<Doct
   return res.json();
 };
 
-// Login a doctor
-export const loginDoctor = async (email: string, password: string): Promise<Doctor> => {
+// ✅ Login a doctor
+export const loginDoctor = async (
+  email: string,
+  password: string
+): Promise<Doctor> => {
   const res = await fetch(`http://localhost:3000/doctors?email=${email}`);
 
   if (!res.ok) {
@@ -44,4 +49,23 @@ export const loginDoctor = async (email: string, password: string): Promise<Doct
   }
 
   return doctor;
+};
+
+// ✅ Create a new appointment
+export const createAppointment = async (
+  data: Appointment
+): Promise<Appointment> => {
+  const res = await fetch("http://localhost:3000/appointments", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to create appointment");
+  }
+
+  return res.json();
 };
