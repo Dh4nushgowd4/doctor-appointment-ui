@@ -25,10 +25,12 @@ export default function AppointmentForm() {
   });
 
   const onSubmit = async (data: FormData) => {
-    await createAppointment(data);
-    alert('Appointment Scheduled!');
-    reset();
+    await createAppointment({
+      ...data,
+      doctorId: Number(data.doctorId),
+    });
   };
+  
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-4 bg-white rounded shadow">
