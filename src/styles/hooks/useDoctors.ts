@@ -14,8 +14,17 @@ export function useDoctors() {
       // Simulated delay
       setTimeout(() => {
         setDoctors([
-          { id: 1, name: 'Dr. Smith', specialty: 'Cardiologist', availableDays: ['Mon', 'Wed'] },
-          { id: 2, name: 'Dr. Patel', specialty: 'Dermatologist', availableDays: ['Tue', 'Thu'] },
+          {
+            id: 1, name: 'Dr. Smith', specialty: 'Cardiologist', availableDates: ['Mon', 'Wed'],
+            email: '',
+            password: ''
+          },
+          {
+            id: 2, name: 'Dr. Patel', specialty: 'Dermatologist', availableDates: ['Tue', 'Thu'],
+            email: '',
+            password: ''
+          }
+          
         ]);
         setLoading(false);
       }, 1000);

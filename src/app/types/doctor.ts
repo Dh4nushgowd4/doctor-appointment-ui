@@ -7,7 +7,6 @@ export interface Doctor {
     id: number;
     name: string;
     email: string;
-    specialty: string; // ✅ Add this
     specialty: string;
     availableDays: string[];
   }

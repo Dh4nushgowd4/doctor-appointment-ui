@@ -1,4 +1,4 @@
-import type { Appointment, Doctor } from "@/types/doctor";
+import type { Appointment, Doctor } from "@/types";
 
 // ✅ Fetch all appointments
 export const fetchAppointments = async (): Promise<Appointment[]> => {

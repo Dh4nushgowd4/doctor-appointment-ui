@@ -3,18 +3,16 @@
     {
       "id": 1,
       "name": "Dr. Asha Bhat",
-      "specialty": "Cardiologist",
-      "availableDays": ["Monday", "Wednesday", "Friday"],
       "email": "asha@example.com",
-      "password": "asha123"
+      "specialty": "Cardiologist",
+      "availableDays": ["Monday", "Wednesday", "Friday"]
     },
     {
       "id": 2,
       "name": "Dr. Raj Mehta",
-      "specialty": "Dermatologist",
-      "availableDays": ["Tuesday", "Thursday"],
       "email": "raj@example.com",
-      "password": "raj123"
+      "specialty": "Dermatologist",
+      "availableDays": ["Tuesday", "Thursday"]
     }
   ],
   "appointments": [
